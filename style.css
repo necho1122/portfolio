@@ -14,7 +14,7 @@
 {
   --background-color: #ffffff;
   --text-color: #213547;
-  --heading-color: #646CFF;
+  --heading-color: #213547;
 }
 
 .dark-mode
@@ -31,41 +31,9 @@ body
 }
 
 h1,
-h2,
-h3
-{
-  color: var(--heading-color);
-}
-
-#app
-{
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1,
-h2,
-h3
-{
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 2em;
-  text-align: start;
-}
-
 h2
 {
-  font-size: 2rem;
-}
-
-h3
-{
-  font-size: 1.5rem;
-  color: #646CFF;
-  text-align: start;
-  margin: 0;
-  padding: 0;
+  color: var(--heading-color);
 }
 
 #app
@@ -80,7 +48,6 @@ h1
   font-size: 2.5rem;
   font-weight: 700;
   margin-top: 2em;
-  color: #e3e3e3;
   text-align: start;
 }
 
@@ -89,7 +56,6 @@ h2
   font-size: 2rem;
   font-weight: 700;
   margin-top: 2em;
-  color: #e3e3e3;
   text-align: start;
 }
 
@@ -97,36 +63,10 @@ h3
 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #646CFF;
   text-align: start;
   margin: 0;
   padding: 0;
-}
-
-@media (prefers-color-scheme: light)
-{
-  :root
-  {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover
-  {
-    color: #747bff;
-  }
-
-  button
-  {
-    background-color: #f9f9f9;
-  }
-
-  h1,
-  h2,
-  h3
-  {
-    color: #646CFF;
-  }
+  color: #646cff;
 }
 
 .navbar
@@ -156,7 +96,7 @@ h3
 
 .navbar a:hover
 {
-  color: #646cff;
+  color: #fbff19;
 }
 
 p
@@ -284,7 +224,6 @@ strong
   }
 }
 
-
 .experience-item p
 {
   font-size: 1.1em;
@@ -298,7 +237,6 @@ strong
     display: flex;
     flex-direction: column;
   }
-
 }
 
 .projects-item-header img
@@ -306,6 +244,7 @@ strong
   width: 100%;
   height: auto;
   border-radius: 10px;
+  max-width: 400px;
 }
 
 .project-description
@@ -314,4 +253,44 @@ strong
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+#toggleButton img
+{
+  width: 20px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  padding-right: 5px;
+}
+
+.contact-section a img
+{
+  width: 60px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  padding-right: 5px;
+}
+
+.contact-section a:hover img
+{
+  filter: invert(0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.footer
+{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content
+{
+  max-width: 1200px;
+  margin: 0 auto;
 }

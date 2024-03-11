@@ -6,10 +6,32 @@ document.addEventListener("DOMContentLoaded", () => {
 	toggleButton.addEventListener("click", () => {
 		const root = document.documentElement;
 
-		// Toggle entre clases CSS
-		root.classList.toggle("light-mode");
-		root.classList.toggle("dark-mode");
+		if (root.classList.contains("light-mode")) {
+			root.classList.remove("light-mode");
+			root.classList.add("dark-mode");
+		} else {
+			root.classList.remove("dark-mode");
+			root.classList.add("light-mode");
+		}
 	});
+
+	const imageLinks = document.querySelectorAll("a > img");
+
+	for (const img of imageLinks) {
+		img.parentElement.addEventListener("click", (event) => {
+			event.preventDefault();
+
+			if (
+				img.src ===
+				"https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg"
+			) {
+				img.src = "https://www.svgrepo.com/show/433086/light-mode.svg";
+			} else {
+				img.src =
+					"https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg";
+			}
+		});
+	}
 });
 
 document.querySelector("#app").innerHTML = `
@@ -20,11 +42,11 @@ document.querySelector("#app").innerHTML = `
         <a href="#projects">Projects</a>
         <a href="#about-me">About me</a>
         <a href="#contact">Contact</a>
+        <a id="toggleButton"><img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="dark mode icon"/></a>
       </div>
     </div>
     <div class="portfolio-body">
       <div class="resume">
-        <button id="toggleButton">Cambiar Modo</button>
         <img src="/assets/images/nelson-ubac.jpeg" alt="Nelson Ubac" />
         <h1>Hi, I'm Nelson Ubac</h1>
         <p>Chemical engineer turned passionate web developer with <strong>1 year of freelance experience</strong>, inspired by crafting unique web applications.</p>
@@ -109,5 +131,10 @@ document.querySelector("#app").innerHTML = `
         <a href="https://t.me/necho1122" target="_blank"><img src="https://img.icons8.com/ios/100/telegram.png" alt="Icono de Telegram"></a>
         <a href="https://www.instagram.com/nelsonubac/" target="_blank"><img src="https://img.icons8.com/ios/100/instagram.png" alt="Icono de instagram"></a></p>
       </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2024 [Nelson, Dev]. Todos los derechos reservados.</p>
+        </div>
+      </footer>
   </div>
 `;
