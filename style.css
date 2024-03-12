@@ -292,6 +292,34 @@ strong
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+.skills-section
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.skills-container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.skill img
+{
+  width: 50px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  padding-right: 5px;
+
+}
+
 .footer
 {
   background-color: #333;
