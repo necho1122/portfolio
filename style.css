@@ -209,9 +209,11 @@ strong
 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: flex-start;
-  gap: 1em;
+  justify-content: start;
+  gap: 1.5em;
   margin-top: 2em;
+  align-items: start;
+  justify-items: start;
 }
 
 @media (max-width: 768px)
@@ -239,12 +241,16 @@ strong
   }
 }
 
+.projects-item-header
+{
+  width: 100%;
+}
+
 .projects-item-header img
 {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-width: 400px;
 }
 
 .project-description
@@ -263,6 +269,11 @@ strong
   margin: 0;
   border-radius: 0;
   padding-right: 5px;
+}
+
+.about-me-section
+{
+  width: 100%;
 }
 
 .contact-section a img
@@ -291,6 +302,6 @@ strong
 
 .footer-content
 {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
