@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	const imageLinks = document.querySelectorAll("a > img");
+	const imageLinks = document
+		.querySelector("#toggleButton")
+		.querySelectorAll("img");
 
 	for (const img of imageLinks) {
 		img.parentElement.addEventListener("click", (event) => {

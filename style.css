@@ -114,7 +114,7 @@ strong
 
 .portfolio-container
 {
-  max-width: 980px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -271,9 +271,36 @@ strong
   padding-right: 5px;
 }
 
+#toggleButton:hover
+{
+  cursor: pointer;
+}
+
 .about-me-section
 {
   width: 100%;
+}
+
+.contact-section
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.contact-section h2
+{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-links
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
 }
 
 .contact-section a img
@@ -326,6 +353,7 @@ strong
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin-top: 2em;
 }
 
 .footer-content
