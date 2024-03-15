@@ -12,7 +12,7 @@
 
 .light-mode
 {
-  --background-color: #ffffff;
+  --background-color: #efefef;
   --text-color: #213547;
   --heading-color: #213547;
 }
@@ -269,11 +269,13 @@ strong
   margin: 0;
   border-radius: 0;
   padding-right: 5px;
+  filter: invert(1);
 }
 
 #toggleButton:hover
 {
   cursor: pointer;
+  filter: invert(1);
 }
 
 .about-me-section
@@ -301,6 +303,7 @@ strong
   flex-direction: row;
   justify-content: flex-start;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 .contact-section a img
