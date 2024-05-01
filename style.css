@@ -397,3 +397,14 @@ strong
   padding: 5px;
   font-size: 0.8rem;
 }
+
+.buttons-section
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons-section a
+{
+  margin-right: 0.5em;
+}
