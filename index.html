@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="./assets/images/icon.png" />
+  <link rel="icon" type="image/png" href="./assets/images/icon-dark.png" media="(prefers-color-scheme: dark)" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Welcome to Nelson Ubac's portfolio. Discover my journey from chemical engineering to becoming a passionate web developer. Explore my projects and skills." />
@@ -69,38 +70,47 @@
 
     gtag('config', 'G-Q7GXKHNN1R');
   </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" role="main">
     <div class="portfolio-container">
-      <div class="portfolio-header">
-        <div class="navbar">
+      <div class="portfolio-header" role="banner">
+        <nav class="navbar" aria-label="Main navigation">
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#about-me">About me</a>
           <a href="#contact">Contact</a>
-          <a id="toggleButton"><img src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg"
-              alt="dark mode icon" /></a>
-        </div>
+          <a id="toggleButton" aria-label="Toggle dark/light mode" tabindex="0"><img
+              src="https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg" alt="Toggle dark mode icon"
+              loading="lazy" /></a>
+        </nav>
       </div>
       <div class="portfolio-body">
-        <div class="resume">
-          <img src="https://live.staticflickr.com/65535/53582783172_8d0d054e44_w.jpg" alt="Portrait of Nelson Ubac" />
+        <section class="resume" aria-label="Resume">
+          <img src="https://live.staticflickr.com/65535/53582783172_8d0d054e44_w.jpg"
+            alt="Portrait of Nelson Ubac smiling, web developer" loading="lazy" />
           <h1>Hi, I'm Nelson Ubac</h1>
-          <p>Chemical engineer turned passionate web developer with <strong>2 years of freelance experience</strong>,
+          <p>Chemical engineer turned passionate web developer with <strong>3 years of freelance experience</strong>,
             inspired by crafting unique web applications.</p>
           <div class="resume-cta">
             <a href="https://www.linkedin.com/in/nelson-enrique-ubac-jimenez-6b1996118/" target="_blank"
-              rel="noopener noreferrer"><img src="https://www.svgrepo.com/show/494244/linkedin-rounded-border.svg"
-                alt="LinkedIn logo" />LinkedIn</a>
-            <a href="https://github.com/necho1122" target="_blank" rel="noopener noreferrer"><img
-                src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" />GitHub</a>
-            <a href="mailto:nelsonubac90@gmail.com"><img src="https://www.svgrepo.com/show/336107/send-email.svg"
-                alt="Email logo" />E-mail</a>
+              rel="noopener noreferrer" aria-label="LinkedIn profile"><img
+                src="https://www.svgrepo.com/show/494244/linkedin-rounded-border.svg" alt="LinkedIn logo"
+                loading="lazy" />LinkedIn</a>
+            <a href="https://github.com/necho1122" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub profile"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                alt="GitHub logo" loading="lazy" />GitHub</a>
+            <a href="mailto:nelsonubac90@gmail.com" aria-label="Send email"><img
+                src="https://www.svgrepo.com/show/336107/send-email.svg" alt="Email logo" loading="lazy" />E-mail</a>
           </div>
-        </div>
-        <div class="experience-section" id="experience">
+        </section>
+        <section class="experience-section" id="experience" aria-label="Experience">
           <h2>Experience</h2>
           <div class="experience-item">
             <div class="experience-item-header">
@@ -110,111 +120,189 @@
             <p>Developed and maintained web applications for clients, portfolio websites, landing pages, online stores,
               blogs, and e-commerce platforms. Collaborated with cross-functional teams to ensure smooth and efficient
               delivery of projects. Worked closely with clients to understand their needs and goals, and provided
-              technical support and a web
-              application for surveys data hosts.</p>
+              technical support.</p>
           </div>
-        </div>
+        </section>
       </div>
-      <div class="projects-section" id="projects">
-        <h2>Projects</h2>
-        <div class="projects-item">
-          <div class="projects-item-header">
-            <img src="https://live.staticflickr.com/65535/53769828205_3c5e3f0b03_b.jpg"
-              alt="Pet Lovers Store home page" />
-          </div>
-          <div class="project-description">
-            <h3>Pet Lovers Store</h3>
-            <p>Pet Lovers Store is an online store that provides everything for your pets. From food and accessories to
-              wellness services and veterinary care, it has it all. Additionally, they rescue animals, provide them with
-              care, and facilitate their adoption.</p>
-            <div class="buttons-section">
-              <a href="https://github.com/necho1122/pet-lovers" target="_blank" rel="noopener noreferrer"><img
-                  src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" />Code</a>
-              <a href="https://pet-lovers.vercel.app" target="_blank" rel="noopener noreferrer"><img
-                  src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" />Web</a>
+      <section class="projects-section" id="projects" aria-label="Projects">
+        <div id="projects-list">
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="./public/images/optixium/optixium.webp" alt="Screenshot of Optixium home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>Optixium</h3>
+              <p>Boost your business with innovative digital solutions, intelligent automation, and cutting-edge
+                technology. At Optixium, we transform your company's productivity through customized tools that
+                optimize processes and drive your growth.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/optixium" target="_blank" rel="noopener noreferrer"
+                  aria-label="Optixium code on GitHub"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                    alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://optixium.digital/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Optixium live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="projects-item">
-          <div class="projects-item-header">
-            <img src="https://live.staticflickr.com/65535/53569664215_8a0eb2c848_z.jpg" alt="ChemLab home page" />
-          </div>
-          <div class="project-description">
-            <h3>ChemLab</h3>
-            <p>This project is a virtual lab developed in React that offers an immersive and complete learning
-              experience for chemistry students and enthusiasts.</p>
-            <div class="buttons-section">
-              <a href="https://github.com/necho1122/chem-lab-virtual/" target="_blank" rel="noopener noreferrer"><img
-                  src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" />Code</a>
-              <a href="https://chem-lab-virtual.vercel.app/" target="_blank" rel="noopener noreferrer"><img
-                  src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" />Web</a>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="./public/images/arepa-burger/arepa-burger.webp"
+                alt="Screenshot of Arepaburger restaurant home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>Arepaburger</h3>
+              <p>Arepaburger is a restaurant website that showcases the menu, allows online orders, and provides
+                information about the restaurant's story and location. Designed for a seamless food ordering experience.
+              </p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/arepaburguer" target="_blank" rel="noopener noreferrer"
+                  aria-label="Arepaburger code on GitHub"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                    alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://arepaburguer.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Arepaburger live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="projects-item">
-          <div class="projects-item-header">
-            <img src="https://live.staticflickr.com/65535/53691930718_02cd65e985_w.jpg"
-              alt="The Trusted Money Exchange home page" />
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="./public/images/dstilos/control-de-ventas.webp"
+                alt="Screenshot of Dstilos sales management program home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>Dstilos</h3>
+              <p>D’Estilo Plus is a company based in El Tigre, Venezuela, specializing in the sale and supply of
+                sublimation products and personalized items such as t-shirts, mugs, caps, and more. With a strong
+                commitment to quality and customer satisfaction, D’Estilo Plus serves both public and private sectors,
+                supporting local economic growth through tailored solutions. Their mission is to deliver high-quality,
+                customized products with integrity and a customer-focused approach. D’Estilo Plus aims to lead the
+                sublimation market by embracing new technologies and maintaining excellence, innovation, and ethical
+                business practices.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/proyecto-gestion-ventas" target="_blank" rel="noopener noreferrer"
+                  aria-label="Dstilos code on GitHub"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                    alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://proyecto-gestion-ventas.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Dstilos live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
+            </div>
           </div>
-          <div class="project-description">
-            <h3>The Trusted Money Exchange</h3>
-            <p>A simple money exchange portal that allows users to exchange money from one currency to another with
-              ease, implementing several technologies.</p>
-            <div class="buttons-section">
-              <a href="https://github.com/necho1122/trusted-money-exchange" target="_blank"
-                rel="noopener noreferrer"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
-                  alt="GitHub logo" />Code</a>
-              <a href="https://trusted-money-exchange.vercel.app/" target="_blank" rel="noopener noreferrer"><img
-                  src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" />Web</a>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="./public/images/pet-lovers/pet-love.webp" alt="Screenshot of Pet Lovers Store home page"
+                loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>Pet Lovers Store</h3>
+              <p>Pet Lovers Store is an online store that provides everything for your pets. From food and accessories
+                to
+                wellness services and veterinary care, it has it all. Additionally, they rescue animals, provide them
+                with
+                care, and facilitate their adoption.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/pet-lovers" target="_blank" rel="noopener noreferrer"
+                  aria-label="Pet Lovers Store code on GitHub"><img
+                    src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://pet-lovers.vercel.app" target="_blank" rel="noopener noreferrer"
+                  aria-label="Pet Lovers Store live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="https://live.staticflickr.com/65535/53569664215_8a0eb2c848_z.jpg"
+                alt="Screenshot of ChemLab home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>ChemLab</h3>
+              <p>This project is a virtual lab developed in React that offers an immersive and complete learning
+                experience for chemistry students and enthusiasts.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/chem-lab-virtual/" target="_blank" rel="noopener noreferrer"
+                  aria-label="ChemLab code on GitHub"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                    alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://chem-lab-virtual.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  aria-label="ChemLab live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="https://live.staticflickr.com/65535/53691930718_02cd65e985_w.jpg"
+                alt="Screenshot of The Trusted Money Exchange home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>The Trusted Money Exchange</h3>
+              <p>A simple money exchange portal that allows users to exchange money from one currency to another with
+                ease, implementing several technologies.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/trusted-money-exchange" target="_blank" rel="noopener noreferrer"
+                  aria-label="The Trusted Money Exchange code on GitHub"><img
+                    src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://trusted-money-exchange.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  aria-label="The Trusted Money Exchange live website"><img
+                    src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" loading="lazy" />Web</a>
 
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="https://live.staticflickr.com/65535/53612912343_70159e2f0a_z.jpg"
+                alt="Screenshot of Cat adoption store home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>Cat adoption store</h3>
+              <p>This project is an online store for cats available for adoption, where users can view the available
+                cats
+                and
+                request the adoption of one of them. The selected cats are added to an adoption cart, and the details of
+                each cat
+                are available for viewing. The main goal is to develop a web application that makes it easy and quick
+                for
+                users to
+                adopt cats. Additionally, the aim is to explore how challenging it can be to develop a web application
+                with basic
+                functionalities using HTML, CSS, and JavaScript.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/general-tests-javascript/tree/main/tienda-de-gatos"
+                  target="_blank" aria-label="Cat adoption store code on GitHub"><img
+                    src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://tienda-de-gatos.vercel.app/" target="_blank"
+                  aria-label="Cat adoption store live website"><img src="https://www.svgrepo.com/show/521261/web.svg"
+                    alt="Web icon" loading="lazy" />Web</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-item-header">
+              <img src="https://live.staticflickr.com/65535/53579039579_bf4c7cffe5.jpg"
+                alt="Screenshot of JumpZone home page" loading="lazy" />
+            </div>
+            <div class="project-description">
+              <h3>JumpZone</h3>
+              <p>Jump Zone Survey App helps users manage survey data hosts. Built with React, it offers a user-friendly
+                interface. Data is stored securely using MongoDB Atlas, and Auth0 safeguards access.</p>
+              <div class="buttons-section">
+                <a href="https://github.com/necho1122/jump-zone" target="_blank"
+                  aria-label="JumpZone code on GitHub"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
+                    alt="GitHub logo" loading="lazy" />Code</a>
+                <a href="https://jump-zone-app.vercel.app/" target="_blank" aria-label="JumpZone live website"><img
+                    src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" loading="lazy" />Web</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="projects-item">
-          <div class="projects-item-header">
-            <img src="https://live.staticflickr.com/65535/53612912343_70159e2f0a_z.jpg" alt="chemlab home page" />
-          </div>
-          <div class="project-description">
-            <h3>Cat adoption store</h3>
-            <p>This project is an online store for cats available for adoption, where users can view the available cats
-              and
-              request the adoption of one of them. The selected cats are added to an adoption cart, and the details of
-              each cat
-              are available for viewing. The main goal is to develop a web application that makes it easy and quick for
-              users to
-              adopt cats. Additionally, the aim is to explore how challenging it can be to develop a web application
-              with basic
-              functionalities using HTML, CSS, and JavaScript.</p>
-            <div class="buttons-section">
-              <a href="https://github.com/necho1122/general-tests-javascript/tree/main/tienda-de-gatos"
-                target="_blank"><img src="https://www.svgrepo.com/show/512317/github-142.svg"
-                  alt="GitHub logo" />Code</a>
-              <a href="https://tienda-de-gatos.vercel.app/" target="_blank"><img
-                  src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" />Web</a>
-            </div>
-          </div>
-        </div>
-        <div class="projects-item">
-          <div class="projects-item-header">
-            <img src="https://live.staticflickr.com/65535/53579039579_bf4c7cffe5.jpg" alt="chemlab home page" />
-          </div>
-          <div class="project-description">
-            <h3>JumpZone</h3>
-            <p>Jump Zone Survey App helps users manage survey data hosts. Built with React, it offers a user-friendly
-              interface. Data is stored securely using MongoDB Atlas, and Auth0 safeguards access.</p>
-            <div class="buttons-section">
-              <a href="https://github.com/necho1122/jump-zone" target="_blank"><img
-                  src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub logo" />Code</a>
-              <a href="https://jump-zone-app.vercel.app/" target="_blank"><img
-                  src="https://www.svgrepo.com/show/521261/web.svg" alt="Web icon" />Web</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="about-me-section" id="about-me">
+        <button id="show-more-projects">Show more projects</button>
+      </section>
+      <section class="about-me-section" id="about-me" aria-label="About me">
         <h2>About me</h2>
         <p>I'm Nelson Ubac, a chemical engineer turned passionate web developer. After exploring different fields, I
-          discovered my true passion in the world of web development. Over the past 2 years, I've been immersed in this
+          discovered my true passion in the world of web development. Over the past 3 years, I've been immersed in this
           exciting journey as a freelance web developer.</p>
         <p>During my time as a freelancer, I've had the privilege of collaborating with various clients to create web
           applications and landing pages that meet their needs and goals. From design to implementation, I am committed
@@ -228,45 +316,73 @@
         <p>I'm excited to continue expanding my skills and contributing to the exciting world of web development. If
           you're looking for a committed, passionate, and experienced developer in the field, I'd be delighted to
           collaborate with you on your next project!</p>
-      </div>
-      <div class="skills-section">
+      </section>
+      <section class="skills-section" aria-label="Skills">
         <h2>Skills</h2>
         <div class="skills-container">
-          <div class="skill"><img src="https://www.svgrepo.com/show/355190/reactjs.svg" alt="ReactJS logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/353925/javascript.svg" alt="JavaScript logo" />
+          <div class="skill"><img src="https://www.svgrepo.com/show/355190/reactjs.svg" alt="ReactJS logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/353925/javascript.svg" alt="JavaScript logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/452228/html-5.svg" alt="HTML5 logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/452185/css-3.svg" alt="CSS3 logo" loading="lazy" />
           </div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/452228/html-5.svg" alt="HTML5 logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/452185/css-3.svg" alt="CSS3 logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/330398/express.svg" alt="ExpressJS logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/439231/mongodb.svg" alt="MongoDB logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/354118/nodejs.svg" alt="Node.js logo" /></div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/354478/typescript-icon.svg" alt="TypeScript logo" />
+          <div class="skill"><img src="https://www.svgrepo.com/show/330398/express.svg" alt="ExpressJS logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/439231/mongodb.svg" alt="MongoDB logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/354118/nodejs.svg" alt="Node.js logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/354478/typescript-icon.svg" alt="TypeScript logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/373595/firebase.svg" alt="Firebase logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://img.stackshare.io/service/11559/zustand.png" alt="Zustand logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/354113/nextjs-icon.svg" alt="nextjs logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/374016/python.svg" alt="python logo"
+              loading="lazy" /></div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/452202/figma.svg" alt="figma logo" loading="lazy" />
           </div>
-          <div class="skill"><img src="https://www.svgrepo.com/show/373595/firebase.svg" alt="Firebase logo" /></div>
-          <div class="skill"><img src="https://img.stackshare.io/service/11559/zustand.png" alt="Zustand logo" /></div>
+          <div class="skill"><img src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" alt="astro logo"
+              loading="lazy" />
+          </div>
+          <div class="skill"><img src="https://icon.icepanel.io/Technology/svg/Azure-SQL-Database.svg" alt="sql logo"
+              loading="lazy" />
+          </div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/530439/api-interface.svg" alt="api logo"
+              loading="lazy" />
+          </div>
+          <div class="skill"><img src="https://www.svgrepo.com/show/452210/git.svg" alt="git logo" loading="lazy" />
+          </div>
         </div>
-      </div>
-      <div class="contact-section" id="contact">
+      </section>
+      <section class="contact-section" id="contact" aria-label="Contact">
         <h2>Contact</h2>
         <p>I'm always happy to connect with new people and discuss potential projects. Whether you have a question, want
           to collaborate, or just want to say hi, feel free to reach out to me using the information below. <a
             href="mailto:nelsonubac90@gmail.com">E-mail</a></p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/nelson-enrique-ubac-jimenez-6b1996118/" target="_blank"
-            rel="noopener noreferrer"><img src="https://img.icons8.com/ios/100/linkedin.png" alt="LinkedIn icon" /></a>
-          <a href="https://twitter.com/necho1122" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios/100/twitter.png" alt="Twitter icon" /></a>
-          <a href="https://www.facebook.com/nelson.ubac" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios/100/facebook.png" alt="Facebook icon" /></a>
-          <a href="https://wa.me/5554981156815" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios/100/whatsapp.png" alt="WhatsApp icon" /></a>
-          <a href="https://t.me/necho1122" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios/100/telegram.png" alt="Telegram icon" /></a>
-          <a href="https://www.instagram.com/nelsonubac/" target="_blank" rel="noopener noreferrer"><img
-              src="https://img.icons8.com/ios/100/instagram.png" alt="Instagram icon" /></a>
+            rel="noopener noreferrer" aria-label="LinkedIn"><img src="https://www.svgrepo.com/show/448234/linkedin.svg"
+              alt="LinkedIn icon" loading="lazy" /></a>
+          <a href="https://twitter.com/necho1122" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><img
+              src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter icon" loading="lazy" /></a>
+          <a href="https://www.facebook.com/nelson.ubac" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook"><img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook icon"
+              loading="lazy" /></a>
+          <a href="https://wa.me/5554981156815" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img
+              src="https://www.svgrepo.com/show/382712/whatsapp-whats-app.svg" alt="WhatsApp icon" loading="lazy" /></a>
+          <a href="https://t.me/necho1122" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img
+              src="https://www.svgrepo.com/show/452115/telegram.svg" alt="Telegram icon" loading="lazy" /></a>
+          <a href="https://www.instagram.com/nelsonubac/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram"><img src="	https://www.svgrepo.com/show/452229/instagram-1.svg" alt="Instagram icon"
+              loading="lazy" /></a>
         </div>
-      </div>
-      <footer class="footer">
+      </section>
+      <footer class="footer" role="contentinfo">
         <div class="footer-content">
           <p>&copy; 2024 Nelson Ubac.</p>
           <p>Design inspired by <a href="https://portfolio.dev/" target="_blank" rel="noopener noreferrer">portfolio by

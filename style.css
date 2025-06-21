@@ -28,12 +28,14 @@ body
 {
   background-color: var(--background-color);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h1,
 h2
 {
   color: var(--heading-color);
+  letter-spacing: 0.5px;
 }
 
 #app
@@ -41,32 +43,7 @@ h2
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-h1
-{
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 2em;
-  text-align: start;
-}
-
-h2
-{
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 2em;
-  text-align: start;
-}
-
-h3
-{
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: start;
-  margin: 0;
-  padding: 0;
-  color: #646cff;
+  min-height: 100vh;
 }
 
 .navbar
@@ -78,10 +55,15 @@ h3
   justify-content: center;
   align-items: center;
   gap: 1em;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
 }
 
 .navbar a
@@ -90,13 +72,18 @@ h3
   font-weight: 500;
   color: #E3E3E3;
   text-decoration: none;
-  transition: color 0.25s;
+  transition: color 0.25s, background 0.25s;
   text-wrap: nowrap;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
 }
 
-.navbar a:hover
+.navbar a:hover,
+.navbar a:focus
 {
   color: #fbff19;
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
 }
 
 p
@@ -133,6 +120,21 @@ strong
   flex-direction: row;
   justify-content: flex-start;
   gap: 1em;
+}
+
+.resume-cta a,
+.project-description a
+{
+  box-shadow: 0 2px 8px rgba(100, 108, 255, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.resume-cta a:hover,
+.project-description a:hover
+{
+  background-color: #2129be;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(100, 108, 255, 0.18);
 }
 
 .resume-cta a
@@ -241,6 +243,21 @@ strong
   }
 }
 
+.projects-item
+{
+  background: rgba(80, 87, 216, 0.04);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(80, 87, 216, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 1.5em;
+}
+
+.projects-item:hover
+{
+  box-shadow: 0 8px 32px rgba(80, 87, 216, 0.18);
+  transform: translateY(-2px) scale(1.01);
+}
+
 .projects-item-header
 {
   width: 100%;
@@ -251,6 +268,12 @@ strong
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: filter 0.2s;
+}
+
+.projects-item-header img:hover
+{
+  filter: brightness(1.08) contrast(1.1);
 }
 
 .project-description
@@ -265,13 +288,11 @@ strong
 {
   overflow: hidden;
   text-overflow: ellipsis;
-  /* Agrega puntos suspensivos (...) al final del texto si se recorta */
   display: -webkit-box;
-  /* Establece el modelo de visualización como caja flexible */
   -webkit-line-clamp: 4;
-  /* Establece el número máximo de líneas a mostrar */
   -webkit-box-orient: vertical;
-  /* Establece la dirección de apilamiento vertical */
+  font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 #toggleButton img
@@ -407,4 +428,58 @@ strong
 .buttons-section a
 {
   margin-right: 0.5em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.buttons-section a:focus
+{
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}
+
+/* Mejor contraste para dark mode */
+.dark-mode .projects-item
+{
+  background: rgba(80, 87, 216, 0.10);
+}
+
+/* Animación sutil para secciones al aparecer */
+section
+{
+  animation: fadeInUp 0.7s cubic-bezier(.39, .575, .565, 1) both;
+}
+
+@keyframes fadeInUp
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#show-more-projects {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#show-more-projects:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #009ec3 100%);
+  transform: translateY(-2px) scale(1.04);
 }
